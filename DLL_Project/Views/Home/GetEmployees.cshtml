@@ -1,0 +1,26 @@
+﻿@model IEnumerable<EmpDetails.EmpModel>
+
+<table class="table table-striped border">
+    <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Age Name</td>
+            <td>Salary</td>
+            <td>Department</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model){
+        <tr>
+            <td>@obj.FirstName</td>
+            <td>@obj.LastName</td>
+            <td>@obj.Age</td>
+            <td>@obj.Salary</td>
+            <td>@obj.Department</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index">Go Back</a>
